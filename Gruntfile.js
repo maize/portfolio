@@ -50,10 +50,11 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/{,*/}*.{html, haml}',
+          '<%= yeoman.app %>/{,*/}*.haml',
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-        ]
+        ],
+        tasks: ['haml']
       }
     },
 
@@ -352,16 +353,20 @@ module.exports = function (grunt) {
     },
 
     haml: {
-      files: ['<%= yeoman.app %>/views/*'],
-      tasks: ['haml'],
       index: {
-        src: "app/index.haml",
-        dest: "app/index.html"
+        src: "<%= yeoman.app %>/index.haml",
+        dest: "<%= yeoman.app %>/index.html"
       },
       main: {
-        src: "app/views/main.haml",
-        dest: "app/views/main.html"
+        src: "<%= yeoman.app %>/views/main.haml",
+        dest: "<%= yeoman.app %>/views/main.html"
       }
+    },
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**']
     }
   });
 
@@ -408,7 +413,8 @@ module.exports = function (grunt) {
     'uglify',
     'rev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'gh-pages'
   ]);
 
   grunt.registerTask('default', [
