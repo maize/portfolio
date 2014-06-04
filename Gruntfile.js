@@ -143,13 +143,10 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the app
     'bower-install': {
       app: {
-        html: '<%= yeoman.app %>/index.html',
+        html: '.tmp/index.html',
         ignorePath: '<%= yeoman.app %>/'
       }
     },
-
-
-
 
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
@@ -306,7 +303,8 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'compass:server'
+        'compass:server',
+        'haml'
       ],
       test: [
         'compass'
@@ -346,7 +344,7 @@ module.exports = function (grunt) {
 
     // Test settings
     karma: {
-      unit: {
+      unit: { 
         configFile: 'karma.conf.js',
         singleRun: true
       }
@@ -355,11 +353,11 @@ module.exports = function (grunt) {
     haml: {
       index: {
         src: "<%= yeoman.app %>/index.haml",
-        dest: "<%= yeoman.app %>/index.html"
+        dest: ".tmp/index.html"
       },
       main: {
         src: "<%= yeoman.app %>/views/main.haml",
-        dest: "<%= yeoman.app %>/views/main.html"
+        dest: ".tmp/views/main.html"
       }
     },
     'gh-pages': {
@@ -378,11 +376,11 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'bower-install',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
-      'watch'
+      'watch',
+      'bower-install'
     ]);
   });
 
