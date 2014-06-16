@@ -20,25 +20,31 @@
   %body{"ng-app" => "portfolioApp"}
     / Add your site or application content here
     .container{"ng-view" => ""}
-      .logo
-        %img{"src" => "/images/logo.svg", "width" => "140px", "height" => "50px"}
-      .avatar
-        %img{"src" => "/images/avatar.png"} 
-      .txt
-        %h1
-          Hey! My name is <b>Matthias Link</b>
-        %p
-          I am a web craftsman. Driven by my passion for technology I have designed and developed web apps for a variety of international companies ranging from YC candidates to blue-chip companies in UK and Germany. I now work for Dropbox in San Francisco, California.<br /><br /><a href="mailto:info@mlink.co">Say hi</a> if you want to know what I’m up to.
-      %ul.social
-        %li
-          %a{"href" => "http://twitter.com/link_m"}
-            Twitter
-        %li
-          %a{"href" => "http://facebook.com/matthias.link"}
-            Facebook
-        %li
-          %a{"href" => "http://instagram.com/link_m"}
-            Instagram
+      .row
+        .col-md-12
+          .logo
+            %img{"src" => "/images/logo.svg", "width" => "140px", "height" => "50px"}
+      .row
+        .col-md-2
+          .avatar
+            %img{"src" => "/images/avatar.png"}
+        .col-md-10
+          %h1
+            Hey! My name is <b>Matthias Link</b>
+          %p
+            I am a web craftsman. Driven by my passion for technology I have designed and developed web experiences for a variety of international companies ranging from Y Combinator candidates in the Silicon Valley to blue-chip companies in the UK and Germany. Currently I work for Dropbox in San Francisco, California.<br /><br /><a href="mailto:info@mlink.co">Say hi</a> if you want to know what I’m up to.
+      .row
+        .col-md-4.col-md-offset-4
+          %ul.list-inline.text-center
+            %li
+              %a{"href" => "http://twitter.com/link_m"}
+                Twitter
+            %li
+              %a{"href" => "http://facebook.com/matthias.link"}
+                Facebook
+            %li
+              %a{"href" => "http://instagram.com/link_m"}
+                Instagram
     / build:js scripts/vendor.js
     / bower:js
     %script{src: "bower_components/jquery/jquery.js"}

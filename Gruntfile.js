@@ -312,7 +312,8 @@ module.exports = function (grunt) {
       dist: [
         'compass:dist',
         'imagemin',
-        'svgmin'
+        'svgmin',
+        'haml'
       ]
     },
 
@@ -352,12 +353,12 @@ module.exports = function (grunt) {
 
     haml: {
       index: {
-        src: "<%= yeoman.app %>/index.haml",
-        dest: ".tmp/index.html"
+        src: '<%= yeoman.app %>/index.haml',
+        dest: '.tmp/index.html'
       },
       main: {
-        src: "<%= yeoman.app %>/views/main.haml",
-        dest: ".tmp/views/main.html"
+        src: '<%= yeoman.app %>/views/main.haml',
+        dest: '.tmp/views/main.html'
       }
     },
     'gh-pages': {
@@ -399,7 +400,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'bower-install',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
