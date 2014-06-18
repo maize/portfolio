@@ -195,7 +195,7 @@ module.exports = function (grunt) {
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
     useminPrepare: {
-      html: '<%= yeoman.app %>/index.html',
+      html: '<%= yeoman.dist %>/index.html',
       options: {
         dest: '<%= yeoman.dist %>'
       }
@@ -304,7 +304,7 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'compass:server',
-        'haml'
+        'haml:server'
       ],
       test: [
         'compass'
@@ -312,8 +312,7 @@ module.exports = function (grunt) {
       dist: [
         'compass:dist',
         'imagemin',
-        'svgmin',
-        'haml'
+        'svgmin'
       ]
     },
 
@@ -352,14 +351,16 @@ module.exports = function (grunt) {
     },
 
     haml: {
-      index: {
-        src: '<%= yeoman.app %>/index.haml',
-        dest: '.tmp/index.html'
+      server: {
+        files: {
+          '.tmp/index.html': 'app/index.haml'
+        }
       },
-      main: {
-        src: '<%= yeoman.app %>/views/main.haml',
-        dest: '.tmp/views/main.html'
-      }
+      dist: {
+        files: {
+          'dist/index.html': 'app/index.haml'
+        }
+      },
     },
     'gh-pages': {
       options: {
@@ -400,8 +401,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'useminPrepare',
+    'haml:dist',
     'concurrent:dist',
+    'useminPrepare',
     'autoprefixer',
     'concat',
     'ngmin',
