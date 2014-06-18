@@ -16,6 +16,7 @@
     / build:css({.tmp,app}) styles/main.css
     %link{href: "styles/main.css", rel: "stylesheet"}/
     %link{href: "styles/mlink.css", rel: "stylesheet"}/
+    %link{href: "webfonts/ss-social.css", rel: "stylesheet"}/
     / endbuild
   %body{"ng-app" => "portfolioApp"}
     / Add your site or application content here
@@ -25,26 +26,26 @@
           .logo
             %img{"src" => "/images/logo.svg", "width" => "140px", "height" => "50px"}
       .row
-        .col-md-2
+        .col-md-2.col-md-offset-1
           .avatar
             %img{"src" => "/images/avatar.png"}
-        .col-md-10
+        .col-md-7
           %h1
             Hey! My name is <b>Matthias Link</b>
           %p
             I am a web craftsman. Driven by my passion for technology I have designed and developed web experiences for a variety of international companies ranging from Y Combinator candidates in the Silicon Valley to blue-chip companies in the UK and Germany. Currently I work for Dropbox in San Francisco, California.<br /><br /><a href="mailto:info@mlink.co">Say hi</a> if you want to know what I’m up to.
       .row
         .col-md-4.col-md-offset-4
-          %ul.list-inline.text-center
+          %ul.social.list-inline.text-center
             %li
               %a{"href" => "http://twitter.com/link_m"}
-                Twitter
+                .ss-icon.ss-twitter
             %li
               %a{"href" => "http://facebook.com/matthias.link"}
-                Facebook
+                .ss-icon.ss-facebook
             %li
               %a{"href" => "http://instagram.com/link_m"}
-                Instagram
+                .ss-icon.ss-instagram
     / build:js scripts/vendor.js
     / bower:js
     %script{src: "bower_components/jquery/jquery.js"}

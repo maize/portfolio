@@ -8,6 +8,7 @@ h1 {
 	color: #303030;
 	font-size: 24px;
 	font-weight: normal;
+	margin-top: 10px;
 }
 
 a,
@@ -18,10 +19,23 @@ a:active {
 
 .logo {
 	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
 }
 
 .avatar {
 	img {
 		max-width: 100%;
 	}
+}
+
+.social {
+	margin-top: 20px;
+}
+
+.social a,
+.social a:hover {
+	font-size: 16px;
+	color: #c1c7d0;
+	text-decoration: none;
 }
