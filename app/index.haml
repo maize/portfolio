@@ -16,6 +16,8 @@
     / build:css({.tmp,app}) styles/main.css
     %link{href: "styles/main.css", rel: "stylesheet"}/
     %link{href: "styles/mlink.css", rel: "stylesheet"}/
+    / endbuild
+    / build:css({.tmp,app}) webfonts/ss-social.css
     %link{href: "webfonts/ss-social.css", rel: "stylesheet"}/
     / endbuild
   %body{"ng-app" => "portfolioApp"}
@@ -24,11 +26,11 @@
       .row
         .col-md-12
           .logo
-            %img{"src" => "/images/logo.svg", "width" => "140px", "height" => "50px"}
+            %img{"src" => "images/logo.svg", "width" => "140px", "height" => "50px"}
       .row
         .col-md-2.col-md-offset-1
           .avatar
-            %img{"src" => "/images/avatar.png"}
+            %img{"src" => "images/avatar.png"}
         .col-md-7
           %h1
             Hey! My name is <b>Matthias Link</b>
