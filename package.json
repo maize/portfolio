@@ -32,7 +32,8 @@
     "karma-ng-scenario": "~0.1.0",
     "grunt-karma": "~0.6.2",
     "grunt-contrib-haml": "~0.2.0",
-    "grunt-gh-pages": "~0.9.1"
+    "grunt-gh-pages": "~0.9.1",
+    "grunt-favicons": "~0.6.4"
   },
   "engines": {
     "node": ">=0.8.0"

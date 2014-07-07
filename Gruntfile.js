@@ -305,7 +305,8 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'compass:server',
-        'haml:server'
+        'haml:server',
+        'favicons:server'
       ],
       test: [
         'compass'
@@ -368,6 +369,28 @@ module.exports = function (grunt) {
         base: 'dist'
       },
       src: ['**']
+    },
+    favicons: {
+      server: {
+        optons: {
+          html: '.tmp/index.html',
+          htmlPrefix: 'images/'
+        },
+        icons: {
+          src: 'app/images/favicon.png',
+          dest: 'app/images'
+        }
+      },
+      dist: {
+        optons: {
+          html: 'dist/index.html',
+          htmlPrefix: 'images/'
+        },
+        icons: {
+          src: 'app/images/favicon.png',
+          dest: 'app/images'
+        }
+      }
     }
   });
 
@@ -403,6 +426,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'haml:dist',
+    'favicons:dist',
     'concurrent:dist',
     'useminPrepare',
     'autoprefixer',
