@@ -284,7 +284,8 @@ module.exports = function (grunt) {
             'webfonts/{,*/}*.ttf',
             'bower_components/**/*',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'fonts/*',
+            'CNAME'
           ]
         }, {
           expand: true,
