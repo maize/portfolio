@@ -284,14 +284,17 @@ module.exports = function (grunt) {
             'webfonts/{,*/}*.ttf',
             'bower_components/**/*',
             'images/{,*/}*.{webp}',
-            'fonts/*',
-            'CNAME'
+            'fonts/*'
           ]
         }, {
           expand: true,
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        }, {
+          expand: true,
+          dest: '<%= yeoman.dist %>/',
+          src: 'CNAME'
         }]
       },
       styles: {
