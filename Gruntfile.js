@@ -370,7 +370,9 @@ module.exports = function (grunt) {
     },
     'gh-pages': {
       options: {
-        base: 'dist'
+        base: 'dist',
+        branch: 'master',
+        repo: 'https://github.com/maize/maize.github.io.git'
       },
       src: ['**']
     },
