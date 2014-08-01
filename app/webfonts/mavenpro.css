@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "MavenPro-Regular";
+  src: url('MavenPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MavenPro-Medium";
+  src: url('MavenPro-Medium.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MavenPro-Bold";
+  src: url('MavenPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.mavenpro {
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.mavenpro-regular {
+  font-family: "MavenPro-Regular";
+}
+
+.mavenpro-medium {
+  font-family: "MavenPro-Medium";
+}
+
+.mavenpro-bold {
+  font-family: "MavenPro-Bold";
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

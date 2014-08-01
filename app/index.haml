@@ -11,6 +11,7 @@
     / build:css styles/vendor.css
     / bower:css
     %link{href: "bower_components/sass-bootstrap/dist/css/bootstrap.css", rel: "stylesheet"}/
+    %link{href: "webfonts/mavenpro.css", rel: "stylesheet"}/
     %link{href: "webfonts/ss-social.css", rel: "stylesheet"}/
     / endbower
     / endbuild
@@ -24,6 +25,21 @@
   %body{"ng-app" => "portfolioApp"}
     / Add your site or application content here
     .container{"ng-view" => ""}
+      .row.margin-bottom
+        .col-md-2
+          %img{"src" => "images/logo.svg", "width" => "112px", "height" => "40px"}
+        .col-md-10
+          %ul.nav-black.list-inline.mavenpro-bold.uppercase.pull-right
+            %li
+              Home
+            %li
+              About
+            %li
+              Contact
+      .row
+        .col-md-12
+          %h1
+            Hello. I'm a web craftsman based in San Francisco, California. I create timeless logos, identities and websites that build dynamic, strategic brands.
       .row
         .col-md-12
           .logo
