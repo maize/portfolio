@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url('Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url('Roboto-Medium.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url('Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.roboto {
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.roboto-regular {
+  font-family: "Roboto-Regular";
+}
+
+.roboto-medium {
+  font-family: "Roboto-Medium";
+}
+
+.roboto-bold {
+  font-family: "Roboto-Bold";
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

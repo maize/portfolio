@@ -17,72 +17,42 @@
     / endbuild
     / build:css({.tmp,app}) styles/main.css
     %link{href: "styles/main.css", rel: "stylesheet"}/
-    %link{href: "styles/mlink.css", rel: "stylesheet"}/
     / endbuild
     / build:css({.tmp,app}) webfonts/ss-social.css
+    %link{href: "webfonts/roboto.css", rel: "stylesheet"}/
     %link{href: "webfonts/ss-social.css", rel: "stylesheet"}/
     / endbuild
-  %body{"ng-app" => "portfolioApp"}
-    / Add your site or application content here
-    .container{"ng-view" => ""}
-      .row.margin-bottom
-        .col-md-2
-          %img{"src" => "images/logo.svg", "width" => "112px", "height" => "40px"}
-        .col-md-10
-          %ul.nav-black.list-inline.mavenpro-bold.uppercase.pull-right
-            %li
-              Home
-            %li
-              About
-            %li
-              Contact
-      .row
-        .col-md-12
-          %h1
-            Hello. I'm a web craftsman based in San Francisco, California. I create timeless logos, identities and websites that build dynamic, strategic brands.
-      .row
-        .col-md-12
-          .logo
-            %img{"src" => "images/logo.svg", "width" => "140px", "height" => "50px"}
-      .row
-        .col-md-2.col-md-offset-1
-          .avatar
-            %img{"src" => "images/avatar.png"}
-        .col-md-8
-          %h1
-            Hey! My name is <b>Matthias Link</b>
-          %p.about
-            I am a web craftsman, minimalist, runner, music addict. Driven by my passion for technology I have designed and developed web apps for a variety of international companies ranging from YC candidates in Silicon Valley to blue-chip companies in UK and Germany. Currently I work for Dropbox in San Francisco, California.<br /><br /><a href="mailto:info@mlink.co">Hit me up</a> if you want to know what I’m up to.
-      .row
-        .col-md-4.col-md-offset-4
-          %ul.social.list-inline.text-center
-            %li
-              %a{"href" => "http://twitter.com/link_m"}
-                .ss-icon.ss-twitter
-            %li
-              %a{"href" => "http://facebook.com/matthias.link"}
-                .ss-icon.ss-facebook
-            %li
-              %a{"href" => "http://instagram.com/link_m"}
-                .ss-icon.ss-instagram
+  %body
+    #main
+      #content
+        .logo
+          %img{"src" => "images/logo.svg", "width" => "auto", "height" => "35px"}
+        %h1.roboto.roboto-bold
+          Matthias Link
+        %h2.roboto.roboto-regular
+          Webcraftsman
+        %ul.social.list-inline.hide
+          %li.social-item
+            %a{"href" => "http://twitter.com/link_m"}
+              .ss-icon.ss-twitter
+          %li.social-item
+            %a{"href" => "http://facebook.com/matthias.link"}
+              .ss-icon.ss-facebook
+          %li.social-item
+            %a{"href" => "http://instagram.com/link_m"}
+              .ss-icon.ss-instagram
     / build:js scripts/vendor.js
     / bower:js
     %script{src: "bower_components/jquery/jquery.js"}
-    %script{src: "bower_components/angular/angular.js"}
     %script{src: "bower_components/sass-bootstrap/dist/js/bootstrap.js"}
-    %script{src: "bower_components/angular-resource/angular-resource.js"}
-    %script{src: "bower_components/angular-cookies/angular-cookies.js"}
-    %script{src: "bower_components/angular-sanitize/angular-sanitize.js"}
-    %script{src: "bower_components/angular-route/angular-route.js"}
     / endbower
     / endbuild
     / build:js({.tmp,app}) scripts/scripts.js
     %script{src: "scripts/app.js"}
-    %script{src: "scripts/controllers/main.js"}
     / endbuild
     :javascript
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', UA-3497209-3']);
+      _gaq.push(['_setAccount', 'UA-3497209-3']);
       _gaq.push(['_trackPageview']);
       (function() {
         var ga = document.createElement('script');
