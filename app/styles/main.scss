@@ -18,12 +18,6 @@ body {
     position: relative;
 }
 
-canvas {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
 h1 {
     color: $LOGO_COLOR;
     font-size: 18px;
@@ -31,7 +25,7 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     line-height: normal;
-    margin: 20px 0 2px 0;
+    margin: 0 0 2px 0;
 }
 
 h2 {
@@ -40,6 +34,7 @@ h2 {
     letter-spacing: 1.2px;
     text-transform: uppercase;
     text-align: center;
+    line-height: normal;
     margin: 0;
 }
 
@@ -63,14 +58,19 @@ a:active {
 
 .logo {
     text-align: center;
+    margin-bottom: 20px
 }
 
 .social {
-    margin: 30px 0 0 0;
+    margin: 20px 0 0 0;
+    text-align: center;
 
     li {
-        a {
-            color: $TEXT_COLOR_BLACK;
+        a, a:hover {
+            color: $TEXT_COLOR_GREY;
+            font-size: 14px;
+            line-height: normal;
+            text-decoration: none;
         }
     }
 }
