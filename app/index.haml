@@ -8,16 +8,15 @@
     %meta{content: "", name: "description"}/
     %meta{content: "width=device-width", name: "viewport"}/
     / Place favicon.ico and apple-touch-icon.png in the root directory
+    / build:css({.tmp,app}) styles/vendor.css
     / bower:css
     %link{href: "bower_components/sass-bootstrap/dist/css/bootstrap.css", rel: "stylesheet"}/
-    %link{href: "webfonts/mavenpro.css", rel: "stylesheet"}/
-    %link{href: "webfonts/ss-social.css", rel: "stylesheet"}/
     / endbower
     / endbuild
     / build:css({.tmp,app}) styles/main.css
     %link{href: "styles/main.css", rel: "stylesheet"}/
     / endbuild
-    / build:css({.tmp,app}) webfonts/ss-social.css
+    / build:css({.tmp,app}) webfonts/fonts.css
     %link{href: "webfonts/roboto.css", rel: "stylesheet"}/
     %link{href: "webfonts/ss-social.css", rel: "stylesheet"}/
     / endbuild
